@@ -24,7 +24,7 @@ if(BUILD_TESTING)
 endif()
 # hinzugefügt
 install(
-  DIRECTORY beschreibung launch konfig welten
+  DIRECTORY beschreibung launch konfig
   DESTINATION share/${PROJECT_NAME}
 )
 # am Ende des Teils
