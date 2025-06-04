@@ -17,6 +17,7 @@ mit_control - The robot structure with ros2_control.<br />
   - lidar.xacro<br />
   - robot_core.xacro<br />
   - robot.urdf.xacro<br />
+  - ros2_control.xacro<br />
 - include<br />
 - konfig<br />
   - my_controllers.yaml<br />
