@@ -1,20 +1,26 @@
-# Mein Roboter
-This is a fork of the original code from joshnewans/articubot_one, with some changes.<br />
-I don't speak German, I just use some German words to avoid keywords (that's my habit).<br /><br />
-ROS2 Humble - Gazebo.<br />
-## Installation<br /> 
-- `colcon build --symlink-install`<br />
-- `cd <your_workspace>/src`<br />
-- `ros2 pkg create --build-type amend_cmake mein_roboter`<br />
+# ohne_control
+ohne_control - The robot structure without ros2_control.<br />
+## Operating<br /> 
+### Termin 1
+- `cd <your_workspace>`<br />
+- `source install/setup.bash`<br />
+- `ros2 launch ohne_control launch_sim.launch.py`<br />
+### Termin 2
+- `rviz2`<br />
+### Termin 3
+- `ros2 run teleop_twist_keyboard teleop_twist_keyboard`<br />
 ## Structure<br /> 
 - beschreibung<br />
+  - camera.xacro<br />
+  - gazebo_control.xacro<br />
+  - inertial_macros.xacro<br />
+  - lidar.xacro<br />
+  - robot_core.xacro<br />
+  - robot.urdf.xacro<br />
 - include<br />
-- konfig<br />
 - launch<br />
+  - launch_sim.launch.py<br />
+  - rsp.launch.py<br />
 - src<br />
-- welten<br />
 - CMakeLists.txt<br />
 - package.xml<br />
-## Branches<br /> 
-- ohne_control - The robot structure without ros2_control<br />
-- mit_control - The robot structure with ros2_control<br />
