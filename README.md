@@ -16,5 +16,5 @@ ROS2 Humble - Gazebo.<br />
 - CMakeLists.txt<br />
 - package.xml<br />
 ## Branches<br /> 
-- ohneControl: the robot structure without ros2_control<br />
-- mitControl: the robot structure with ros2_control<br />
+- ohneControl - The robot structure without ros2_control<br />
+- mitControl - the robot structure with ros2_control<br />
