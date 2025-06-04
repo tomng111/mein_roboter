@@ -17,4 +17,4 @@ ROS2 Humble - Gazebo.<br />
 - package.xml<br />
 ## Branches<br /> 
 - ohneControl - The robot structure without ros2_control<br />
-- mitControl - the robot structure with ros2_control<br />
+- mitControl - The robot structure with ros2_control<br />
