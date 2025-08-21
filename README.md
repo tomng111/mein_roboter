@@ -18,3 +18,4 @@ ROS2 Humble - Gazebo.<br />
 ## Branches<br /> 
 - ohne_control - The robot structure without ros2_control<br />
 - mit_control - The robot structure with ros2_control<br />
+- slam_toolbox - The robot structure with ros2_control and slam_toolbox<br/>
