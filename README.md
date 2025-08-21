@@ -1,20 +1,39 @@
-# Mein Roboter
-This is a fork of the original code from <ins>joshnewans/articubot_one</ins>, with some changes.<br />
-I don't speak German, I just use some German words to avoid keywords (that's my habit) and to say thank you to the country where I studied (Deustchland).<br /><br />
-ROS2 Humble - Gazebo.<br />
-## Installation<br /> 
-- `colcon build --symlink-install`<br />
-- `cd <your_workspace>/src`<br />
-- `ros2 pkg create --build-type amend_cmake mein_roboter`<br />
+# slam_toolbox
+slam_toolbox - The robot structure with ros2_control and slam_toolbox.<br />
+## Operating<br /> 
+### Installation
+- `sudo apt install ros-humble-slam-toolbox`<br />
+### Termin 1
+- `cd <your_workspace>`<br />
+- `source install/setup.bash`<br />
+- `ros2 launch mit_control launch_sim.launch.py`<br />
+### Termin 2
+- `rviz2`<br />
+### Termin 3
+- `ros2 launch slam_toolbox online_async_launch.py slam_params_file:=./src/mit_control/konfig/mapper_params_online_async.yaml use_sim_time:=true`<br />
+### Termin 4
+- `ros2 run teleop_twist_keyboard teleop_twist_keyboard --ros-args -r /cmd_vel:=/diff_cont/cmd_vel_unstamped`<br />
+### rviz2
+- Add a `RobotModel` display, with the topic set to `/robot_description`<br />
+- Add a `Map` display, with the topic set to `/map`<br />
+- Add a `Camera` display, with the topic set to `/camera/image_raw`<br />
 ## Structure<br /> 
 - beschreibung<br />
+  - camera.xacro<br />
+  - gazebo_control.xacro<br />
+  - inertial_macros.xacro<br />
+  - lidar.xacro<br />
+  - robot_core.xacro<br />
+  - robot.urdf.xacro<br />
+  - ros2_control.xacro<br />
 - include<br />
 - konfig<br />
+  - gazebo_params.yaml<br/>
+  - mapper_params_online_async.yaml<br/>
+  - my_controllers.yaml<br />
 - launch<br />
+  - launch_sim.launch.py<br />
+  - rsp.launch.py<br />
 - src<br />
-- welten<br />
 - CMakeLists.txt<br />
 - package.xml<br />
-## Branches<br /> 
-- ohne_control - The robot structure without ros2_control<br />
-- mit_control - The robot structure with ros2_control<br />
