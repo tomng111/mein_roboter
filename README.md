@@ -1,5 +1,6 @@
 # slam_toolbox
 slam_toolbox - The robot structure with ros2_control and slam_toolbox.<br />
+The previous results (since 2016) using hector_slam could be found here <ins>github.com/tomng111/roskinetic_slam_results</ins>.
 ## Operating<br /> 
 ### Installation
 - `sudo apt install ros-humble-slam-toolbox`<br />
